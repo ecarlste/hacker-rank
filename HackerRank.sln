@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Strings", "Strings", "{C29F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyString", "FunnyString\FunnyString.csproj", "{AA85E6BA-24E1-4138-B532-193354D52C72}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Warmup", "Warmup", "{C15C5BAF-2A86-4172-B7CD-5025B4246689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtopianTree", "UtopianTree\UtopianTree.csproj", "{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,10 @@ Global
 		{AA85E6BA-24E1-4138-B532-193354D52C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA85E6BA-24E1-4138-B532-193354D52C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA85E6BA-24E1-4138-B532-193354D52C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,5 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C29FAD2C-AC2F-4594-B82C-4209D2CC98AC} = {46D18C1C-5367-4298-9231-55C02D6633EE}
 		{AA85E6BA-24E1-4138-B532-193354D52C72} = {C29FAD2C-AC2F-4594-B82C-4209D2CC98AC}
+		{C15C5BAF-2A86-4172-B7CD-5025B4246689} = {46D18C1C-5367-4298-9231-55C02D6633EE}
+		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 	EndGlobalSection
 EndGlobal
