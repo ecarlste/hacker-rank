@@ -10,8 +10,35 @@ namespace LonelyInteger
     {
         static int lonelyinteger(int[] a)
         {
+            Dictionary<int, int> valueCounts = BuildDictionaryOfValueCounts(a);
+
+            int lonelyInteger = FindLonelyInteger(valueCounts);
 
             return 0;
+        }
+
+        private static int FindLonelyInteger(Dictionary<int, int> valueCounts)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static Dictionary<int, int> BuildDictionaryOfValueCounts(int[] a)
+        {
+            Dictionary<int, int> valueCounts = new Dictionary<int, int>();
+
+            foreach (int key in a)
+            {
+                if (valueCounts.ContainsKey(key))
+                {
+                    valueCounts[key]++;
+                }
+                else
+                {
+                    valueCounts[key] = 1;
+                }
+            }
+
+            return valueCounts;
         }
 
         static void Main(String[] args)
