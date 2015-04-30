@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximizingXOR", "Maximizing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLane", "ServiceLane\ServiceLane.csproj", "{17B270C8-FA1E-4D84-815E-DF157C7703F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLoveLetterMystery", "TheLoveLetterMystery\TheLoveLetterMystery.csproj", "{DAE2F804-850D-4101-828F-FD18317CE695}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{17B270C8-FA1E-4D84-815E-DF157C7703F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B270C8-FA1E-4D84-815E-DF157C7703F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B270C8-FA1E-4D84-815E-DF157C7703F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE2F804-850D-4101-828F-FD18317CE695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE2F804-850D-4101-828F-FD18317CE695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE2F804-850D-4101-828F-FD18317CE695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE2F804-850D-4101-828F-FD18317CE695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{7D40BBE3-BC9A-499B-B86B-A7B8A4EC1257} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 		{88319A69-FD21-49C5-AAC4-5B9BF8889E26} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 		{17B270C8-FA1E-4D84-815E-DF157C7703F8} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
+		{DAE2F804-850D-4101-828F-FD18317CE695} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 	EndGlobalSection
 EndGlobal
