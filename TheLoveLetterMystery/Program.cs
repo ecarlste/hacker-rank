@@ -21,13 +21,25 @@ namespace TheLoveLetterMystery
             foreach (string testString in testStrings)
             {
                 int minimumChanges = DetermineMinimumChangesForPalidrome(testString);
-                Console.WriteLine(testString);
+                Console.WriteLine(minimumChanges);
             }
         }
 
         private static int DetermineMinimumChangesForPalidrome(string testString)
         {
-            return 0;
+            int palidromicChangeCount = 0;
+            int leftIndex = 0;
+            int rightIndex = testString.Length-1;
+
+            while (leftIndex < rightIndex)
+            {
+                int characterValueChange = Math.Abs(testString[leftIndex] - testString[rightIndex]);
+                palidromicChangeCount += characterValueChange;
+                leftIndex++;
+                rightIndex--;
+            }
+
+            return palidromicChangeCount;
         }
     }
 }
