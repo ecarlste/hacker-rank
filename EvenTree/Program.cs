@@ -81,18 +81,17 @@ namespace EvenTree
 
         private static void AddEdgeToGraph(ref Vertex[] vertices, Edge edge)
         {
-            if (vertices[edge.VertexOne] == null)
+            if (vertices[edge.VertexOne-1] == null)
             {
-                vertices[edge.VertexOne] = new Vertex(edge.VertexOne);
+                vertices[edge.VertexOne-1] = new Vertex(edge.VertexOne);
             }
 
-            if (vertices[edge.VertexTwo] == null)
+            if (vertices[edge.VertexTwo-1] == null)
             {
-                vertices[edge.VertexTwo] = new Vertex(edge.VertexTwo);
+                vertices[edge.VertexTwo-1] = new Vertex(edge.VertexTwo);
             }
 
-            vertices[edge.VertexOne].AddChild(vertices[edge.VertexTwo]);
-            vertices[edge.VertexTwo].AddChild(vertices[edge.VertexOne]);
+            vertices[edge.VertexOne-1].AddChild(vertices[edge.VertexTwo-1]);
         }
     }
 }
