@@ -61,7 +61,7 @@ namespace EvenTree
         }
     }
 
-    class Program
+    class Solution
     {
         static void Main(string[] args)
         {
@@ -77,6 +77,39 @@ namespace EvenTree
 
                 AddEdgeToGraph(ref vertices, edge);
             }
+
+            int maxEdgeCuts = FindMaxEdgeCutsEvenTreeForest(vertices[0]);
+            Console.WriteLine(maxEdgeCuts);
+        }
+
+        private static int FindMaxEdgeCutsEvenTreeForest(Vertex vertex)
+        {
+            int maxEdgeCuts = 0;
+
+            FindTreeSizeAndPruneEdges(vertex, ref maxEdgeCuts);
+
+            return maxEdgeCuts;
+        }
+
+        private static int FindTreeSizeAndPruneEdges(Vertex vertex, ref int edgeCutsMade)
+        {
+            int treeSize = 1;
+
+            foreach (Vertex connectedTo in vertex.ConnectedTo)
+            {
+                int subTreeSize = FindTreeSizeAndPruneEdges(connectedTo, ref edgeCutsMade);
+
+                if (subTreeSize % 2 == 0)
+                {
+                    edgeCutsMade++;
+                }
+                else
+                {
+                    treeSize += subTreeSize;
+                }
+            }
+
+            return treeSize;
         }
 
         private static void AddEdgeToGraph(ref Vertex[] vertices, Edge edge)
