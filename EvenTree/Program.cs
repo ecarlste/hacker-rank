@@ -29,27 +29,35 @@ namespace EvenTree
         }
     }
 
-    class Node
+    class Vertex
     {
-        List<Node> children;
-        public List<Node> Children
+        int key;
+        public int Key
         {
-            get { return children; }
+            get { return key; }
+            set { key = value; }
         }
 
-        public Node()
+        List<Vertex> connectedTo;
+        public List<Vertex> ConnectedTo
         {
-            children = new List<Node>();
+            get { return connectedTo; }
         }
 
-        public void AddChild(Node child)
+        public Vertex(int key)
         {
-            children.Add(child);
+            this.key = key;
+            connectedTo = new List<Vertex>();
         }
 
-        public void RemoveChild(Node child)
+        public void AddChild(Vertex child)
         {
-            children.Remove(child);
+            connectedTo.Add(child);
+        }
+
+        public void RemoveChild(Vertex child)
+        {
+            connectedTo.Remove(child);
         }
     }
 
@@ -60,13 +68,31 @@ namespace EvenTree
             string[] input = Console.ReadLine().Split(' ');
             int numberOfVertices = Int32.Parse(input[0]);
             int numberOfEdges = Int32.Parse(input[1]);
-            Edge[] edges = new Edge[numberOfEdges];
+            Vertex[] vertices = new Vertex[numberOfVertices];
 
             for (int i = 0; i < numberOfEdges; i++)
             {
                 input = Console.ReadLine().Split(' ');
-                edges[i] = new Edge(Int32.Parse(input[0]), Int32.Parse(input[1]));
+                Edge edge = new Edge(Int32.Parse(input[1]), Int32.Parse(input[0]));
+
+                AddEdgeToGraph(ref vertices, edge);
             }
+        }
+
+        private static void AddEdgeToGraph(ref Vertex[] vertices, Edge edge)
+        {
+            if (vertices[edge.VertexOne] == null)
+            {
+                vertices[edge.VertexOne] = new Vertex(edge.VertexOne);
+            }
+
+            if (vertices[edge.VertexTwo] == null)
+            {
+                vertices[edge.VertexTwo] = new Vertex(edge.VertexTwo);
+            }
+
+            vertices[edge.VertexOne].AddChild(vertices[edge.VertexTwo]);
+            vertices[edge.VertexTwo].AddChild(vertices[edge.VertexOne]);
         }
     }
 }
