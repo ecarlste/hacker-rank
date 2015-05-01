@@ -27,7 +27,25 @@ namespace AlternatingCharacters
 
         private static int FindDeletionsNeededForAlternating(string testString)
         {
-            throw new NotImplementedException();
+            int numberOfDeletions = 0;
+            char lastCharacter = testString[0];
+            char thisCharacter;
+
+            for (int i = 1; i < testString.Length; i++)
+            {
+                thisCharacter = testString[i];
+
+                if (thisCharacter == lastCharacter)
+                {
+                    numberOfDeletions++;
+                }
+                else
+                {
+                    lastCharacter = thisCharacter;
+                }
+            }
+
+            return numberOfDeletions;
         }
     }
 }
