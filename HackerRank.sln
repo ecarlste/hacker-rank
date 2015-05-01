@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLoveLetterMystery", "The
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LonelyInteger", "LonelyInteger\LonelyInteger.csproj", "{557855E0-164C-491B-AE92-A839B7257E4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternatingCharacters", "AlternatingCharacters\AlternatingCharacters.csproj", "{B45407A4-52AC-404E-ABE7-5C5F57C7472D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{557855E0-164C-491B-AE92-A839B7257E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{557855E0-164C-491B-AE92-A839B7257E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{557855E0-164C-491B-AE92-A839B7257E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45407A4-52AC-404E-ABE7-5C5F57C7472D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45407A4-52AC-404E-ABE7-5C5F57C7472D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45407A4-52AC-404E-ABE7-5C5F57C7472D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45407A4-52AC-404E-ABE7-5C5F57C7472D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{17B270C8-FA1E-4D84-815E-DF157C7703F8} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 		{DAE2F804-850D-4101-828F-FD18317CE695} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
 		{557855E0-164C-491B-AE92-A839B7257E4D} = {C15C5BAF-2A86-4172-B7CD-5025B4246689}
+		{B45407A4-52AC-404E-ABE7-5C5F57C7472D} = {C29FAD2C-AC2F-4594-B82C-4209D2CC98AC}
 	EndGlobalSection
 EndGlobal
