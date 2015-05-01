@@ -14,12 +14,14 @@ namespace LonelyInteger
 
             int lonelyInteger = FindLonelyInteger(valueCounts);
 
-            return 0;
+            return lonelyInteger;
         }
 
         private static int FindLonelyInteger(Dictionary<int, int> valueCounts)
         {
-            throw new NotImplementedException();
+            IEnumerable<int> item = from pair in valueCounts where pair.Value == 1 select pair.Key;
+
+            return item.Single();
         }
 
         private static Dictionary<int, int> BuildDictionaryOfValueCounts(int[] a)
