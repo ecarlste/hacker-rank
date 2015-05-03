@@ -10,6 +10,27 @@ namespace StrangeGrid
     {
         static void Main(string[] args)
         {
+            Tuple<int, int> rowAndColumn = ReadRowAndColumnInput();
+
+            int value = FindSequenceValueByRowColumn(rowAndColumn.Item1, rowAndColumn.Item2);
+
+            Console.WriteLine(value);
+        }
+
+        private static int FindSequenceValueByRowColumn(int row, int column)
+        {
+            int valueFromColumn = 2 * (column - 1);
+            int valueFromOddOrEvenRow = (row % 2 == 0) ? 1 : 0;
+            int valueFromRow = 10 * ((row + 1) / 2 - 1) + valueFromOddOrEvenRow;
+
+            return valueFromColumn + valueFromRow;
+        }
+
+        private static Tuple<int, int> ReadRowAndColumnInput()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+
+            return new Tuple<int, int>(Int32.Parse(input[0]), Int32.Parse(input[1]));
         }
     }
 }
