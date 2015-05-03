@@ -12,16 +12,16 @@ namespace StrangeGrid
         {
             Tuple<int, int> rowAndColumn = ReadRowAndColumnInput();
 
-            int value = FindSequenceValueByRowColumn(rowAndColumn.Item1, rowAndColumn.Item2);
+            long value = FindSequenceValueByRowColumn(rowAndColumn.Item1, rowAndColumn.Item2);
 
             Console.WriteLine(value);
         }
 
-        private static int FindSequenceValueByRowColumn(int row, int column)
+        private static long FindSequenceValueByRowColumn(int row, int column)
         {
             int valueFromColumn = 2 * (column - 1);
             int valueFromOddOrEvenRow = (row % 2 == 0) ? 1 : 0;
-            int valueFromRow = 10 * ((row + 1) / 2 - 1) + valueFromOddOrEvenRow;
+            long valueFromRow = 10 * (long) ((row + 1) / 2 - 1) + valueFromOddOrEvenRow;
 
             return valueFromColumn + valueFromRow;
         }
