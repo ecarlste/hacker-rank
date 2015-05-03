@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,10 +34,38 @@ namespace Restaurant
     {
         static void Main(string[] args)
         {
-            BreadLoaf[] loaves = ReadLoafData();
+            BreadLoaf[] loaves = ReadBreadData();
+
+            foreach (BreadLoaf loaf in loaves)
+            {
+                int maxBreadSquares = FindMaxBreadSquares(loaf);
+                Console.WriteLine(maxBreadSquares);
+            }
         }
 
-        private static BreadLoaf[] ReadLoafData()
+        private static int FindMaxBreadSquares(BreadLoaf loaf)
+        {
+            BigInteger breadLength = loaf.Length;
+            BigInteger breadBreadth = loaf.Breadth;
+
+            BigInteger bigGreatestCommonDivisor = BigInteger.GreatestCommonDivisor(breadLength, breadBreadth);
+            int greatestCommonDivisor;
+
+            try
+            {
+                greatestCommonDivisor = (int) bigGreatestCommonDivisor;
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine("Unable to convert {0}: \n   {1}",
+                    bigGreatestCommonDivisor, e.Message);
+                return -1;
+            }
+
+            return loaf.Length * loaf.Breadth / (greatestCommonDivisor * greatestCommonDivisor);
+        }
+        
+        private static BreadLoaf[] ReadBreadData()
         {
             int testCaseCount = Int32.Parse(Console.ReadLine());
             BreadLoaf[] loaves = new BreadLoaf[testCaseCount];
